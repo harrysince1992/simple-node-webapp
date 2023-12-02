@@ -2,9 +2,6 @@ version: "3.8"
 
 services:
   simple-webapp-node:
-    build:
-      context: ./
-      dockerfile: Dockerfile
     image: simple-node-webapp:latest
     deploy:
       replicas: 2
