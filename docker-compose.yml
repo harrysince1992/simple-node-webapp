@@ -2,7 +2,8 @@ version: "3.8"
 
 services:
   simple-webapp-node:
-    build: .
+    build: ./
+    image: simple-node-webapp:latest
     deploy:
       replicas: 2
       mode: replicated
