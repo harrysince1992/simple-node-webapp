@@ -1,6 +1,6 @@
 FROM node:21-alpine3.17
 
-LABEL AUTHOR="Harpreet Singh"
+LABEL "AUTHOR"="Harpreet Singh"
 
 WORKDIR /app
 
