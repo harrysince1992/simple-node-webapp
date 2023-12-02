@@ -1,0 +1,15 @@
+{
+  "name": "simple-node-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serverStart": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harpreet singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
