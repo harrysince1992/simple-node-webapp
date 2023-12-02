@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  simple-webapp-node:
+    build: .
+    deploy:
+      replicas: 2
+      mode: replicated
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    networks:
+    - overlay
+    ports: 
+      target: 8081
+      published: 8081
+      mode: host
+      protocol: tcp
+networks:
+  overlay:
