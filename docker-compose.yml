@@ -14,7 +14,7 @@ services:
     networks:
     - overlay
     ports: 
-      target: 8081
+    - target: 8081
       published: 8081
       mode: host
       protocol: tcp
