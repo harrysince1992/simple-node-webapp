@@ -17,5 +17,5 @@ jobs:
       - name: install npm packages
         run: npm install
       - name: run webapp
-        run: npm run serverstart
+        run: npm run serverStart
   
