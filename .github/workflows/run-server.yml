@@ -6,3 +6,4 @@ on:
 jobs:
   CI-Build:
     uses: harrysince1992/simple-cicd-pipeline/.github/workflows/CI-trigger.yml@main
+    secrets: inherit
