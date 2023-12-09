@@ -1,1 +1,21 @@
+name: Execute simple node webapp app
+run-name: Execute simple node webapp on push to {{ github.ref }}
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  Deploy-simple-webapp:
+    name: deploy simple node webapp
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['18.x']
+    steps:
+      - uses: actions/checkout@v4
+      - name: install npm packages
+        run: npm install
+      - name: run webapp
+        run: npm run serverstart
+  
