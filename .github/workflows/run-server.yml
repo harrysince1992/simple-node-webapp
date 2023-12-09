@@ -23,9 +23,9 @@ jobs:
       - name: setup latest app version
         if: ${{ github.event.ref == 'refs/heads/main' || github.event.ref == 'refs/heads/develop' }}
         run: |
-          if [[ ${{ github.event.ref }} == 'refs/heads/main' ]];then
+          if [[ ${{ github.event.ref }} == 'refs/heads/main' ]]; then
             echo "It is main branch. hence, we will create release tag"
-          else if [[ ${{ github.event.ref }} == 'refs/heads/develop' ]];then
+          else if [[ ${{ github.event.ref }} == 'refs/heads/develop' ]]; then
              echo "It is main branch. hence, we will create snapshot tag"
           fi
       # - name: push latest image
