@@ -20,7 +20,7 @@ jobs:
       - name: echo current date and time
         run: echo ${{ steps.date.outputs.date }}
       - name: setup latest app version
-        if: ${{ github.event.ref == 'ref/heads/main' }}
+        if: ${{ github.event.ref == 'refs/heads/main' }}
         run: |
           echo "It is main branch. hence, we will create release tag"
   
