@@ -1,0 +1,9 @@
+name: Simple Node Web App deploy pipeline
+
+on:
+  repository_dispatch:
+    types: [deploy]
+
+jobs:
+  Deploy-Pipeline:
+    uses: harrysince1992/simple-cicd-pipeline/.github/workflows/Deploy-Service.yml@main
