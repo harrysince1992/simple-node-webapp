@@ -19,6 +19,11 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
       - name: echo current date and time
         run: echo ${{ steps.date.outputs.date }}
+      - name: setup latest app version
+        if: ${{ github.event.ref == 'ref/heads/main' }}
+        run: |
+          echo "It is main branch. hence, we will create release tag"
+  
       # - name: push latest image
       #   uses: docker/build-push-action@v5
       #   with:
