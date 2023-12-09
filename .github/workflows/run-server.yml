@@ -1,9 +1,8 @@
-name: Execute simple node webapp app
-run-name: Execute simple node webapp on push to ${{ github.ref }}
+name: Build Simple Webapp
 on:
   push:
     branches: ['main', 'develop']
 
 jobs:
   CI-Build:
-    uses: harrysince1992/simple-cicd-pipeline/.github/workflows/CI-trigger@main
+    uses: harrysince1992/simple-cicd-pipeline/.github/workflows/CI-trigger.yml@main
