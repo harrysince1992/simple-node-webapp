@@ -1,0 +1,10 @@
+name: test workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-hello-world:
+    runs-on: ec2-runner
+    steps:
+    - run: echo "Hello World"
